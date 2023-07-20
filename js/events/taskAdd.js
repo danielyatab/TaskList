@@ -38,7 +38,7 @@ export default function addTask(btnAdd, btnDelete,input){
 
     if(e.target.matches(btnDelete) || e.target.matches(`${btnDelete} *`)){
       const $taskS = d.querySelectorAll(".container-task"),
-        span = e.target.closest('.container-task');
+        span = e.target.parentElement;
       let index = 0;
       for (let i = 0; i < $taskS.length; i++) {
         if($taskS[i]===span) index = i
